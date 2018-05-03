@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Is your Car Environment Friendly?</title>
+  </head>
+  <body>
+      <div class="container-fluid" id="mainContainer">
+          <div class="row">
+                <div class="col-lg-12 col-md-12" id="sideBar">
+                  <div class="contain">
+                    <h2>Select<br>your car</h2>
+                    <p>Click to see <span><a href="http://carfueldata.direct.gov.uk/" target="_Blank">Emission DataSet</a></span></p>
+                    <p>Click to see <span><a href="https://ec.europa.eu/clima/policies/transport/vehicles/cars_en#tab-0-0" target="_Blank">Goal Details</a></span></p>
+                    <div class="drops">
+                        <select class="js-example-basic-single" id="carMakeDrop" name="make">
+                        </select>
+  
+                        <select class="js-example-basic-single" id="carModelDrop" name="model">
+                        </select>
+  
+                        <select class="js-example-basic-single" id="carVariantDrop" name="variant">
+                          
+                        </select>
+  
+                        <button type="button" class="CheckCar" id="checkCarButton" disabled>Check your Car</button>
+                    </div>
+                  </div>
+                  
+                  
+                  <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button> -->
+                </div>
+
+                <div class="col-lg-9 col-md-8 d-none" id="content">    
+                  <div id="overlay" class="">
+                    <!-- <h1 class="msg">Select your Car<br>to see Result</h1> -->
+                    <!-- <p>Click here to <span><a href="https://ec.europa.eu/clima/policies/transport/vehicles/cars_en">Read More</a></span> </p> -->
+                    <div class="loader">
+                      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    </div>
+                      
+                    <img src="img/Car.png" id="overImage" alt="" srcset="">
+                  </div>
+                  <h3 class="carName" id="carNameText">Hyundai Creta</h3>
+                  <h4 class="carModel" id="carVariantText">Lorem Ipsum Dolor</h4>
+                  <div class="infoCard">
+                    <div class="chartContainer">
+                      <p>Your Car's C0<sub>2</sub> Emission</p>
+                      <h2><span id="CO2Header"></span><span><p>g/km</p></span></h2>
+
+                      <div class="chart-container" style="">
+                          <canvas id="myChart"></canvas>
+                      </div>                      
+                      <!-- <canvas id="myChart"></canvas> -->
+                    </div>
+                    <img src="img/Car.png" id="carImage" alt="Car Illustration">
+                  </div>
+
+
+                  <div class="extraData">
+                    <div class="data">
+                      <p class="extraLabel">Fuel for 100km</p>
+                      <h3 class="extraVal"><span id="range"></span><span><p>litre</p></span></h3>
+                    </div>
+                    <div class="data">
+                      <p class="extraLabel">Noise Level</p>
+                      <h3 class="extraVal"><span id="noise"></span><span><p>db(A)</p></span></h3>
+                    </div>
+                    <div class="data">
+                      <p class="extraLabel">Emissions CO.</p>
+                      <h3 class="extraVal"><span id="COe"></span><span><p>mg/km</p></span></h3>
+                    </div>
+                    <div class="data">
+                      <p class="extraLabel">THC Emissions</p>
+                      <h3 class="extraVal"><span id="THCe"></span><span><p>mg/km</p></span></h3>
+                    </div>
+                    <div class="data">
+                      <p class="extraLabel">Emissions NOx</p>
+                      <h3 class="extraVal"><span id="NOxe"></span><span><p>mg/km</p></span></h3>
+                    </div>
+                    <div class="data">
+                      <p class="extraLabel">THC + NOx Emissions</p>
+                      <h3 class="extraVal"><span id="THC_NOxe"></span><span><p>mg/km</p></span></h3>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="js/chartjs-plugin-annotation.js"></script>
+    <script src="js/countUp.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html> 

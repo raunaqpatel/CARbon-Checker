@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0.3px;
+}
+.contain{
+    max-width: 450px;
+    margin: auto;
+}
+#sideBar{
+    background-color: #2c3e50;
+    height: 100vh;
+    padding: 0px;
+
+    -webkit-transition: all 0.375s; /* Safari */
+    -webkit-transition-timing-function: ease-in-out;
+    transition: all 0.375s;
+    transition-timing-function: ease-in-out;
+}
+
+#sideBar h2{
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.102);
+    line-height: 1.25;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 66px;
+}
+
+.drops{
+    position: relative;
+    top: 70px;
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.contain p{
+    color:rgba(255, 255, 255, 0.2);
+    margin: 20px 56px 0px;
+}
+.contain p:first-of-type{
+    margin: 40px 56px 0px;
+}
+
+.contain p>span>a{
+    color: #e74c3c;
+    font-weight: 400;
+}
+
+
+/* Container of the select block */
+.select2-container{
+    width: 100% !important;
+    height: 50px;
+    margin-bottom: 60px;
+}
+/* Style for the container of select */
+.select2-container--default .select2-selection--single{
+    height: 50px;
+    background-color: hsla(39, 74%, 95%, 0.05);
+    border: 0px;
+    border-radius: 0px;
+}
+/* text for select */
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 50px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 24px;
+    padding-right: 50px;
+}
+/* chevron for select */
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 50px;
+    right: 20px;
+}
+
+.select2-dropdown{
+    border-radius: 0px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #e74c3c;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus{
+    outline-color: #e74c3c;
+    outline-width: 1px;
+}
+
+.select2-container::after{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    position: absolute;
+    top: -27px;
+}
+
+#carMakeDrop + .select2-container::after{
+    content: "Car Make";
+}
+#carModelDrop + .select2-container::after{
+    content: "Car Model";
+}
+#carVariantDrop + .select2-container::after{
+    content: "Car Variant";
+}
+
+.Rectangle_3 {
+    
+    position: absolute;
+    left: 30px;
+    top: 1115px;
+    width: 282px;
+    height: 52px;
+    z-index: 6;
+  }
+
+.CheckCar{
+    height: 50px;
+    background-color: rgb(231, 76, 60);
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.07);
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    line-height: 48px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.17);
+    border: 0px;
+    width: 100%;
+    
+
+    
+}
+
+.Check_Car_Rating {
+    
+    position: absolute;
+    left: 103.062px;
+    top: 1503.584px;
+    z-index: 16;
+  }
+  
+  
+  .Rectangle_3_copy {
+    
+    position: absolute;
+    left: 30px;
+    top: 1434px;
+    width: 282px;
+    height: 52px;
+    z-index: 13;
+  }
+  
+  
+
+
+
+
+#content{
+    background-color: rgb(247, 249, 250);
+    height: 100vh;
+    padding: 0px;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255,0.95);
+    z-index: 10;
+    transition: all .3s ease;
+    
+}
+
+.makeTransparent{
+    opacity: 0;
+    /* display: none; */
+}
+#overImage{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 600px;
+}
+
+.overlay h1{
+    font-size: 72px;
+    color: rgb(44, 62, 80);
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: -0.7px;
+    line-height: 1.5;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.overlay p{
+    margin-top: 20px;
+    margin-left: 85px;
+}
+
+.carName{
+    margin-top: 50px;
+    font-size: 18px;
+    color: rgb(44, 62, 80);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.carModel{
+    font-size: 16px;
+    color: rgba(44, 62, 80, 0.502);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.infoCard{
+    position: relative;
+    height: 450px;
+    border-width: 1px;
+    border-color: rgb(245, 245, 245);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+    margin: 0px 30px 10px;
+}
+
+.chartContainer > p{
+    font-size: 16px;
+    color: rgba(44, 62, 80, 0.4);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.chartContainer h2{
+    font-size: 64px;
+    color: rgb(44, 62, 80);
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: -0.7px;
+    position: relative;
+    left: -5px;
+    top: -8px;
+}
+
+
+.chartContainer h2>span>p{
+    display: inline-block;
+    font-size: 24px;
+    color: rgb(44, 62, 80);
+    text-align: left;
+    position: relative;
+    left: 8px;
+    top:-1px;
+    opacity: 0.5;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+#carImage{
+    position: absolute;
+    top: 0px;
+    right: 1px;
+}
+
+#myChart{
+    position: absolute;
+    bottom: 0;
+    height: 290px;
+}
+
+.chart-container{
+    position: relative; 
+    height:280px; 
+    width:100%;
+    bottom: 5px;
+}
+
+.data{
+    display: inline-block;
+    /* margin: 50px 0px 0px 50px; */
+    margin-top: 50px;
+    width: 33%;
+    text-align: center;
+}
+
+.extraLabel{
+    font-size: 16px;
+    color: rgba(44, 62, 80, 0.4);
+    font-weight: 600;
+
+}
+.extraVal{
+    position: relative;
+    left:-4px;
+}
+
+.extraVal>span>p{
+    display: inline-block;
+    font-size: 16px;
+    color: rgb(44, 62, 80);
+    letter-spacing: 0.4px;
+    text-align: left;
+    position: relative;
+    left: 4px;
+    top:0px;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+sub{
+    bottom: -.1em;
+    left: 0.05em;
+}
+
+
+*:disabled{
+    opacity: .2;
+    cursor: not-allowed;
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--single{
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.select2-container--default.select2-container--disabled .select2-selection--single > .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: rgba(0, 0, 0, 0.17);
+}
+
+.select2-container--default.select2-container--disabled::after{
+    opacity: 0.2;
+}
+.select2-container--default.select2-container--disabled .select2-selection__arrow{
+    opacity: 0.2;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    #sideBar{
+        height: 40vh;
+    }
+    #content{
+        height: 100%;
+    }
+    
+}
+
+
+.loader{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin-top: calc(50vh - 64px);
+    margin-left: calc(50% - 64px);
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #2c3e50;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
+  
