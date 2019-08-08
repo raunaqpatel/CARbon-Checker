@@ -10,7 +10,7 @@ To make people a bit more aware about the environmental impact of the car they a
 
 
 
-<h3><strong><a href="https://raunaqpatel.github.io/CARbon-Checker/index.html" target="_Blank" rel="nofollow noreferrer"> Check the Live Website</a></strong></h3>
+<h3><strong><a href="https://raunaqpatel.github.io/CARbon-Checker/index.html" target="_blank" rel="nofollow noreferrer"> Check the Live Website</a></strong></h3>
 
 
 
